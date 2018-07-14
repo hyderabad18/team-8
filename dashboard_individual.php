@@ -398,7 +398,7 @@ if(!$link){
         
         function populateSidebar() {
             var items = ["Dashboard", "Account Settings", "Self Assessment",  "Feedback", "Resources", "FAQs"];
-            var links = ["#", "acctsettings.html", "self-assessment.html",  "feedback_dashboard.html", "resources.html", "faqs.html"];
+            var links = ["#", "acctsettings.html", "self-assessment.html",  "feedback_dashboard.php", "resources.html", "faqs.html"];
             
             var sidebarItemModel = document.getElementById("sidebarItemModel");
             for(itemNo in items) {

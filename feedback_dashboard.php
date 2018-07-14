@@ -1,3 +1,12 @@
+<?php  
+session_start();  
+?>  
+<?php
+$link = mysqli_connect('localhost', 'root' , '', 'jpmc');
+if(!$link){
+    die('error connection');
+}
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -127,8 +136,28 @@
                     <img src="images/femaleUser.png" style="border-radius:50%; width:60%; margin-right:4%;"/>
                 </div>
                 <div style="width:60%; display:flex; flex-direction:column; justify-content:center; font-size:12px; color:#4285F4;">
-                    <p style="margin:0;">Jane Doe</p>
-                    <p style="margin:0;">21 | Female</p>
+                   <p style="margin:0;"> <?php
+                                   $value1= $_SESSION["email"] ;
+                                   $query = "select * from `individual_signup` where email='$value1' ";
+                                    $result = mysqli_query($link,$query);
+                                    $row = mysqli_fetch_assoc($result);
+                                    $_SESSION["email"] = "$value1";
+                                    echo "Name: " .$row["name"]. " ";
+                                   ?> </p>
+                    <p style="margin:0;"> <?php    $value1= $_SESSION["email"] ;
+                                   $query = "select * from `individual_signup` where email='$value1' ";
+                                    $result = mysqli_query($link,$query);
+                                    $row = mysqli_fetch_assoc($result);
+                                    $_SESSION["email"] = "$value1";
+                                    echo "Mobile: " .$row["mobile"]. " ";
+                                   ?></p>
+                    <p style="margin:0;"> <?php    $value1= $_SESSION["email"] ;
+                                   $query = "select * from `individual_signup` where email='$value1' ";
+                                    $result = mysqli_query($link,$query);
+                                    $row = mysqli_fetch_assoc($result);
+                                    $_SESSION["email"] = "$value1";
+                                    echo "College: " .$row["colgname"]. " ";
+                                   ?></p>
                 </div>
             </div>
             <!--Navigation Items-->
@@ -151,7 +180,7 @@
                 <!--Logo & Branding-->
                 <div style="width:100%; height:100%; display:flex; flex-direction:row; align-items:center;">
                     <div style="margin-left:4%;">
-                        <a class = "navbar-brand" href = "index.html" style = "padding: 0;"> <img src = "images/logo_name_h_blue.png" height = 60px style = "float: left;"></a>
+                        <a class = "navbar-brand" href = "index.html" style = "padding: 0;"> <img src = "images/logo_name_h.jpg" height = 60px style = "float: left;"></a>
                     </div>
                     
                 </div>
@@ -232,7 +261,7 @@
         
         function populateSidebar() {
             var items = ["Dashboard", "Account Settings", "Self Assessment",  "Feedback", "Resources", "FAQs"];
-            var links = ["#", "acctsettings.html", "dashboard_individual.html","feedback.html", "resources.html", "faqs.html"];
+            var links = ["#", "acctsettings.html", "dashboard_individual.php","feedback_dashboard.php", "resources.html", "faqs.html"];
             
             var sidebarItemModel = document.getElementById("sidebarItemModel");
             for(itemNo in items) {

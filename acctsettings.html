@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="/js/acctsetvalidate.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    ul {
+        li: right;
+    }
+
+    .navbar-default .navbar-nav > li > a {
+        color: black;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .navbar-header > a {
+        color: black;
+        font-weight: bold;
+    }
+
+    .navbar {
+        margin:0;
+    }
+
+
+
+    form {border: 0px solid #f1f1f1; 
+    	align: center;
+    	width: 100%;}
+
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #2196F3;
+        color: white;
+        padding: 14px 20px;
+        margin: auto;
+        border: none;
+        cursor: pointer;
+        width: 25%;
+        padding: 3vh;
+        margin: 3vh;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    .imgcontainer {
+        text-align: center;
+        margin: 24px 0 12px 0;
+    }
+
+    img.avatar {
+        width: 20%;
+        border-radius: 10%;
+    }
+
+    .container {
+        padding: 16px;
+
+    }
+
+    span.psw {
+        float:center;
+        padding-top: 16px;
+    }
+
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 300px) {
+        span.psw {
+           display: block;
+           float: none;
+        }
+        .cancelbtn {
+           width: 100%;
+        }
+    }
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> 
+                </button>
+              <a class = "navbar-brand" href = "index.html" style = "padding: 0;"> <img src = "/images/logo_name_h.png" height = 50px style = "float: left;"></a>
+	
+
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="get-started.html">Get Started</a></li> 
+                    <li><a href="resources.html">Resources</a></li> 
+                    <li><a href="faqs.html">FAQs</a></li> 
+                    <li class="active"><a href="#">Login</a></li> 
+                </ul>
+            </div>
+        </div>
+    </nav>
+     <h2 align="center">Edit your Profile</h2>
+     <div class="container" style="width:35%; height:70%; border:0px; border-radius: 10px" >
+        <form action="/action_page.php" name="acctsettings" onsubmit="return(validate_acctsettings());">
+          
+
+            <label for="password"><b>Old Password:   </b><br></label>
+            <input type="text" placeholder="Enter Email ID" name="oldPassword" required><br>
+
+            <label for="newPassword"><b>New Password:  </b><br></label>
+            <input type="password" placeholder="Enter Password" name="newPassword" required><br/>            
+
+             <label for="confirmPassword"><b>Confirm Password:  </b><br></label>
+            <input type="password" placeholder="Enter confirmation Password" name="confirmPassword" required><br/>   
+              
+            
+             <label for="mobilenumber"><b>New Mobile number: </b><br></label>
+            <input type="text" placeholder="Enter new mobile number" name="mobileNumber" required><br/>            
+     
+
+
+                <div style = "text-align: center;">    
+                <button type="submit">Update</button><br>
+
+            </div>
+        </form>
+    </div>
+</body>
+</html>

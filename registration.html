@@ -127,15 +127,15 @@ echo "established";
     }
 ?>
 <html>
-
 <head>
- <title>Register</title>
- <link rel="stylesheet" type="text/css" href="style3.css">
-</head>
-<body>
- 
-	<style type="text/css">
-	ul {
+	<title>Main page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset = "UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+        ul {
         li: right;
     }
  
@@ -212,44 +212,204 @@ echo "established";
 		  }
 		}
 		
-	</style>
 
+		.carousel-inner {
+			padding-bottom: 0;
+		}
+
+		html,body
+		{
+		    width: 100%;
+		    height: 100%;
+		    margin: 0px;
+		    padding: 0px;
+		    overflow-x: hidden; 
+		}
+
+		ul {
+			li: right;
+		}
+
+		.navbar-default .navbar-nav > li > a {
+			color: black;
+			font-weight: bold;
+			margin: 0;
+		}
+
+		.navbar-header > a {
+			color: black;
+			font-weight: bold;
+		}
+
+		.navbar {
+			margin:0;
+		}
+
+		h4 {
+			text-align: center;
+		}
+		
+
+		.button1 {
+			height: 6vh;
+			border-radius: 10px;
+			background-color:  #2196F3;
+			border: none;
+			color: white;
+
+		}
+		.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #2196F3;
+   color: white;
+   text-align: center;
+}
+    .fa {
+  padding: 30px;
+  font-size: 30px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 4px 1px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+
+  width: 100px;
+  background: #3B5998;
+  color: white;
+  1px 30px 1px 30px;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+		.main-box {
+			background: linear-gradient(to right, #d3cce3, #e9e4f0);
+			border-radius: 8px;
+			margin-left: 0vh;
+		}
+
+		.button1 > a {
+			text-decoration: none; color: white;
+		}
+
+		.img {
+			width: 100%;
+			height: auto;
+		}
+
+		.text-hin {
+			display: none;
+		}
+
+		.text-en {
+			display: block;
+		}
+
+		#switch-to-hindi, #switch-to-english > a {
+			text-decoration: underline;
+			cursor: pointer;
+			
+		}
+
+
+		@media only screen and (max-width: 600px) {
+			.outer-main-box {
+				padding: 5vh 15vw 0 15vw;
+				background: linear-gradient(to right, #d3cce3, #e9e4f0);
+			}
+
+			#first-row {
+				padding-top: 0;
+			}
+
+			.box-images {
+				display: block;
+				margin: 2vh auto;
+			}
+
+			h4 {
+				padding-top: 3vh;
+			}
+		}
+
+	</style>
 </head>
-<body bgcolor="white">
+
+    <body>
+ <nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span> 
+				</button>
+				<a class = "navbar-brand" href = "index.html" style = "padding: 0;"> 
+				  <img src = "images/logo_name_h.jpg" height = 50px style = "float: left;">
+				</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li id = "switch-to-hindi" onclick = "toggleLanguage(1)"><a>??????</a></li>
+					<li id = "switch-to-english" onclick = "toggleLanguage(2)" style="display: none;"><a>English</a></li>
+					<li class="active"><a href="#"><span class = "text-en">Home</span><span class = "text-hin">???</span></a></li>
+					<li><a href="about.html"><span class = "text-en">About</span><span class = "text-hin">???? ???????</span></a></li>
+					<li><a href="get-started.html"><span class = "text-en">Get Started</span><span class = "text-hin">??????</span></a></li>
+					<li><a href="resources.html"><span class = "text-en">Resources</span><span class = "text-hin">????</span></a></li>
+					<li><a href="faqs.html"><span class = "text-en">FAQs</span><span class = "text-hin">??????</span></a></li>
+					<li><a href="login.html"><span class = "text-en">Login</span><span class = "text-hin">??? ??</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+    
+    
+
 
 	<div class = "container"  style="width:35%; height:70%; border:0px; border-radius: 10px">
-    
+   
 
 <form method="post">
 <div class="rloginbox">
-    		<img src="pic2.png" class="pic2">
+    		
 
-    <h1>Register Here</h1>
-    <p>**Fill all the details</p><br>
+    <h1>Student Registration</h1>
+    
     <br>
-    NAME<span class="error">* <?php echo $nameErr;?></span>:<input type="text" name="NAME" placeholder="Enter Name">
+   <b>Name</b> <span class="error">* <?php echo $nameErr;?></span>:<input type="text" name="NAME" placeholder="Enter Name">
   <br>
  <br>
-    EMAIL I'D<span class="error">* <?php echo $nameErr;?></span>:<input type="text" name="EMAIL I'D" placeholder="Enter email i'd">
+    <b>Email Id</b><span class="error">* <?php echo $nameErr;?></span>:<input type="text" name="EMAIL I'D" placeholder="Enter email i'd">
     
  <br>
  <br>
   
- GENDER<span class="error">* <?php echo $nameErr;?></span>:<select name="GENDER">
+ <b>Gender</b><span class="error">* <?php echo $nameErr;?></span>:<select name="GENDER">
   <option value="male">male</option>
   <option value="female">female</option>
 </select>
 
  <br>
  <br>
- AGE<span class="error">* <?php echo $nameErr;?></span>:<input type="text" name="AGE" placeholder="Enter age">
+ <b>Age</b><span class="error">* <?php echo $nameErr;?></span>:<input type="text" name="AGE" placeholder="Enter age">
  <br>
  <br>
- COLLEGE/UNIVERSITY<span class="error">* <?php echo $nameErr;?></span>:<input type="text" name="COLLEGE/UNIVERSITY" placeholder="college/university">
+ <b>College/University</b><span class="error">* <?php echo $nameErr;?></span>:<input type="text" name="COLLEGE/UNIVERSITY" placeholder="college/university">
     
  <br>
  <br>
- DISABILITY<span class="error">* <?php echo $nameErr;?></span>:<select name="DISABILITY"> 
+<b>Disability</b><span class="error">* <?php echo $nameErr;?></span>:<select name="DISABILITY"> 
   <option value="vision">vision</option>
   <option value="hearing">hearing</option>
   <option value="speech">speech</option>
@@ -258,10 +418,10 @@ echo "established";
    
  <br>
  <br>
- CONTACT NUMBER<span class="error">* <?php echo $nameErr;?></span>:<input type="text" name="CONTACT NUMBER" placeholder="Enter contact number">
+ <b>Contact Number</b><span class="error">* <?php echo $nameErr;?></span>:<input type="text" name="CONTACT NUMBER" placeholder="Enter contact number">
  <br>
  <br>
-  PASSWORD<span class="error">* <?php echo $nameErr;?></span>:<input type="text" name="PASSWORD" placeholder="Enter password">
+  <b>Password</b><span class="error">* <?php echo $nameErr;?></span>:<input type="text" name="PASSWORD" placeholder="Enter password">
     
  <br>
  <br>

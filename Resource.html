@@ -1,27 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>Youth4Jobs</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style type="text/css">
-     .navbar-header > a {
-	 		color: black;
+	<title>Main page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset = "UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+    .navbar-default .navbar-nav > li > a {
+			color: black;
+			font-weight: bold;
+			margin: 0;
+		}
+
+		.navbar-header > a {
+			color: black;
 			font-weight: bold;
 		}
 
 		.navbar {
 			margin:0;
 		}
-
-	
-	</style>
+		 
+</script>
 </head>
 <body>
-       <nav class="navbar navbar-default">
+     <nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -35,14 +40,14 @@
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
-					<li id = "switch-to-hindi" onclick = "toggleLanguage(1)"><a>??????</a></li>
+					<li id = "switch-to-hindi" onclick = "toggleLanguage(1)"><a>हिन्दी</a></li>
 					<li id = "switch-to-english" onclick = "toggleLanguage(2)" style="display: none;"><a>English</a></li>
-					<li class="active"><a href="#"><span class = "text-en">Home</span><span class = "text-hin">???</span></a></li>
-					<li><a href="about.html"><span class = "text-en">About</span><span class = "text-hin">???? ???????</span></a></li>
-					<li><a href="get-started.html"><span class = "text-en">Get Started</span><span class = "text-hin">??????</span></a></li>
-					<li><a href="resources.html"><span class = "text-en">Resources</span><span class = "text-hin">????</span></a></li>
-					<li><a href="faqs.html"><span class = "text-en">FAQs</span><span class = "text-hin">??????</span></a></li>
-					<li><a href="login.html"><span class = "text-en">Login</span><span class = "text-hin">??? ??</span></a></li>
+					<li class="active"><a href="#"><span class = "text-en">Home</span><span class = "text-hin">होम</span></a></li>
+					<li><a href="about.html"><span class = "text-en">About</span><span class = "text-hin">अधिक जानकारी</span></a></li>
+					<li><a href="get-started.html"><span class = "text-en">Get Started</span><span class = "text-hin">शुरुआत</span></a></li>
+					<li><a href="resources.html"><span class = "text-en">Resources</span><span class = "text-hin">साधन</span></a></li>
+					<li><a href="faqs.html"><span class = "text-en">FAQs</span><span class = "text-hin">प्रश्न</span></a></li>
+					<li><a href="login.html"><span class = "text-en">Login</span><span class = "text-hin">लॉग इन</span></a></li>
 				</ul>
 			</div>
 		</div>

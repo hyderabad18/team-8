@@ -1,3 +1,8 @@
+<?php  
+session_start();  
+?>  
+
+
 <?php
 	$link = mysqli_connect('localhost', 'root' , '', 'jpmc');
 	if(!$link){
@@ -17,7 +22,7 @@ if( isset( $_POST['gender'])) {
 } 
 $age = ''; 
 if( isset( $_POST['age'])) {
-    $ = $_POST['age']; 
+    $age = $_POST['age']; 
 } 
 $colgname = ''; 
 if( isset( $_POST['colgname'])) {
@@ -39,11 +44,14 @@ if( isset( $_POST['password'])) {
 $query = "select * from `university_signup` where colgname='$colgname' ";
 $result = mysqli_query($link,$query);
 if (mysqli_num_rows($result) > 0) {
-	echo "University has already registered!"
-	echo "<br> Click here to <a href='individual_signup.html'> login </a>";
+	header("Location: registration.html");
 }
 else{
 	$con="INSERT INTO `individual_signup`(name,email,gender,age,colgname,disability,mobile,password) VALUES ('$name', '$email','$gender','$age','$colgname', '$disability' ,'$mobile','$password' )";
+    $result = mysqli_query($link,$con);
+    $_SESSION["email"] = "$email";
+
+    header("Location: registration.html");
 }
 	mysqli_close($link);
 ?>

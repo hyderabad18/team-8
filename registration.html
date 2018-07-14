@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>University Sign Up</title>
+	<title>Individual Sign Up</title>
 	  <script type="text/javascript" src="/js/validate_patient.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -140,59 +140,42 @@
         </div>
     </nav>
 	<div class = "container"  style="width:35%; height:70%; border:0px; border-radius: 10px">
-					<form action="./individual.php" method="post">
-<div class="rloginbox">
-    		
+					<form name = "patient" action="./individual.php" method = "post" style="border:0px solid #ccc">
+					    <h1 align = "center">Sign Up</h1>
+					    
+					    <hr>
+					    <label for="textnames"><b>Name</b></label>
+					    <input type="text" placeholder="Enter  Name" name="name" required>
+					    <br>
+              			<label for="textnames"><b>Email</b></label>
+					    <input type="text" placeholder="Enter Email" name="email" required>
+					    <br>
+					    <label for="textnames"><b>Gender</b></label>
+					    <input type="text" placeholder="Enter gender" name="gender" required>
+					    <br>
+					    <label for="email"><b>Age</b></label>
+					    <input type="text" placeholder="Enter your Age" name="age" required>
+					    <br>
+						<label for="email"><b>College Name</b></label>
+					    <input type="text" placeholder="Enter your college name." name="colgname" required>
+					    <br>
+						<label for="email"><b>Disability</b></label>
+					    <input type="text" placeholder="Enter your Disability" name="disability" required>
+					    <br>
+						<label for="email"><b>Mobile</b></label>
+					    <input type="text" placeholder="Enter your contact" name="mobile" required>
+					    <br>
+						<label for="email"><b>Password</b></label>
+					    <input type="text" placeholder="Enter your Password" name="password" required>
+					    <br>
 
-    <h1>Student Registration</h1>
-    
-    <br>
-   <b>Name</b> <span class="error">* <?php echo $nameErr;?></span>:<input type="text" name="NAME" placeholder="Enter Name">
-  <br>
- <br>
-    <b>Email Id</b><span class="error">* <?php echo $nameErr;?></span>:<input type="text" name="EMAIL I'D" placeholder="Enter email i'd">
-    
- <br>
- <br>
-  
- <b>Gender</b><span class="error">* <?php echo $nameErr;?></span>:<select name="GENDER">
-  <option value="male">male</option>
-  <option value="female">female</option>
-</select>
-
- <br>
- <br>
- <b>Age</b><span class="error">* <?php echo $nameErr;?></span>:<input type="text" name="AGE" placeholder="Enter age">
- <br>
- <br>
- <b>College/University</b><span class="error">* <?php echo $nameErr;?></span>:<input type="text" name="COLLEGE/UNIVERSITY" placeholder="college/university">
-    
- <br>
- <br>
-<b>Disability</b><span class="error">* <?php echo $nameErr;?></span>:<select name="DISABILITY"> 
-  <option value="vision">vision</option>
-  <option value="hearing">hearing</option>
-  <option value="speech">speech</option>
-  <option value="physically challenged">physically challenged</option>
-</select>
-   
- <br>
- <br>
- <b>Contact Number</b><span class="error">* <?php echo $nameErr;?></span>:<input type="text" name="CONTACT NUMBER" placeholder="Enter contact number">
- <br>
- <br>
-  <b>Password</b><span class="error">* <?php echo $nameErr;?></span>:<input type="text" name="PASSWORD" placeholder="Enter password">
-    
- <br>
- <br>
-<div class="clearfix" style="display: flex; justify-content: center;">
+					    <div class="clearfix" style="display: flex; justify-content: center;">
 					      <button type="submit" class="signupbtn" onclick="validate_patient()">Sign Up</button>
 					    </div>
-					   <br>
-					     <p style="text-align: center;"> Already have an account? <a href = "login.html">Login</a>. </p>
-    
-</div>
-    </form>
+					    <br>
+					     <p style="text-align: center;"> Already have an account? <a href = "Univ_Student.html">Add a Student.</a>. </p>
+					   
+					</form>
 	</div>
 	
 </body>

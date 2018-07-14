@@ -118,16 +118,16 @@
 
     <h2 align="center">Login</h2>
     <div class="container" style="width:35%; height:70%; border:0px; border-radius: 10px" >
-        <form action="/action_page.php" name="userlogin" onsubmit="return(validatelogin());">
+        <form action="./login.php" name="userlogin" onsubmit="return(validatelogin());">
             <div class="imgcontainer">
                 <img src="images/user.png" alt="Avatar" class="avatar" >
             </div>
 
             <label for="uname"><b>Email ID:   </b><br></label>
-            <input type="text" placeholder="Enter Email ID" name="uname" required><br>
+            <input type="text" placeholder="Enter Email ID" name="email" required><br>
 
             <label for="psw"><b>Password:  </b><br></label>
-            <input type="password" placeholder="Enter Password" name="psw" required><br/>            
+            <input type="password" placeholder="Enter Password" name="password" required><br/>            
             <div style = "text-align: center;">
                 <button type="submit">Login</button><br>
                 <input type="checkbox" checked="checked" name="remember" style="text-align: center;">Remember me<br/>

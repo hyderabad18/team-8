@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Main page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset = "UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+
+		.carousel-inner {
+			padding-bottom: 0;
+		}
+
+		html,body
+		{
+		    width: 100%;
+		    height: 100%;
+		    margin: 0px;
+		    padding: 0px;
+		    overflow-x: hidden; 
+		}
+
+		ul {
+			li: right;
+		}
+
+		.navbar-default .navbar-nav > li > a {
+			color: black;
+			font-weight: bold;
+			margin: 0;
+		}
+
+		.navbar-header > a {
+			color: black;
+			font-weight: bold;
+		}
+
+		.navbar {
+			margin:0;
+		}
+
+		h4 {
+			text-align: center;
+		}
+		
+
+		.button1 {
+			height: 6vh;
+			border-radius: 10px;
+			background-color:  #2196F3;
+			border: none;
+			color: white;
+
+		}
+		.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #2196F3;
+   color: white;
+   text-align: center;
+}
+    .fa {
+  padding: 30px;
+  font-size: 30px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 4px 1px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+
+  width: 100px;
+  background: #3B5998;
+  color: white;
+  1px 30px 1px 30px;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+		.main-box {
+			background: linear-gradient(to right, #d3cce3, #e9e4f0);
+			border-radius: 8px;
+			margin-left: 0vh;
+		}
+
+		.button1 > a {
+			text-decoration: none; color: white;
+		}
+
+		.img {
+			width: 100%;
+			height: auto;
+		}
+
+		.text-hin {
+			display: none;
+		}
+
+		.text-en {
+			display: block;
+		}
+
+		#switch-to-hindi, #switch-to-english > a {
+			text-decoration: underline;
+			cursor: pointer;
+			
+		}
+
+
+		@media only screen and (max-width: 600px) {
+			.outer-main-box {
+				padding: 5vh 15vw 0 15vw;
+				background: linear-gradient(to right, #d3cce3, #e9e4f0);
+			}
+
+			#first-row {
+				padding-top: 0;
+			}
+
+			.box-images {
+				display: block;
+				margin: 2vh auto;
+			}
+
+			h4 {
+				padding-top: 3vh;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span> 
+				</button>
+				<a class = "navbar-brand" href = "index.html" style = "padding: 0;"> 
+				  <img src = "images/logo_name_h.jpg" height = 50px style = "float: left;">
+				</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li id = "switch-to-hindi" onclick = "toggleLanguage(1)"><a>हिन्दी</a></li>
+					<li id = "switch-to-english" onclick = "toggleLanguage(2)" style="display: none;"><a>English</a></li>
+					<li class="active"><a href="#"><span class = "text-en">Home</span><span class = "text-hin">होम</span></a></li>
+					<li><a href="about.html"><span class = "text-en">About</span><span class = "text-hin">अधिक जानकारी</span></a></li>
+					<li><a href="get-started.html"><span class = "text-en">Get Started</span><span class = "text-hin">शुरुआत</span></a></li>
+					<li><a href="resources.html"><span class = "text-en">Resources</span><span class = "text-hin">साधन</span></a></li>
+					<li><a href="faqs.html"><span class = "text-en">FAQs</span><span class = "text-hin">प्रश्न</span></a></li>
+					<li><a href="login.html"><span class = "text-en">Login</span><span class = "text-hin">लॉग इन</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="hero-unit">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel" style="padding: 0; margin: 0;">
+		    <ol class="carousel-indicators">
+		      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		      <li data-target="#myCarousel" data-slide-to="1"></li>
+		      <li data-target="#myCarousel" data-slide-to="2"></li>
+		    </ol>
+		    <div class="carousel-inner">
+		      <div class="item active">
+		        <img src="images/signup.png" alt="Get Help" style="width:100%;">
+		      </div>
+
+		      <div class="item">
+		        <img src="images/assessment.png" alt="Sign Up" style="width:100%;">
+		      </div>
+		    
+		      <div class="item">
+		        <img src="images/findjob.png" alt="Find Jobs" style="width:100%;">
+		      </div>
+		    </div>
+
+		    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+		      <span class="glyphicon glyphicon-chevron-left"></span>
+		      <span class="sr-only">Previous</span>
+		    </a>
+		    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+		      <span class="glyphicon glyphicon-chevron-right"></span>
+		      <span class="sr-only">Next</span>
+		    </a>
+	  </div>
+	</div>
+	<div class = "row" id = "first-row" style="padding-top: 2%;">
+		<div class = "col-sm-4 outer-main-box">
+			<div class = "row">
+				<div class = "col-sm-1"></div>
+				<div class = "col-sm-10 main-box">
+					<h4 style="text-align: center; font-weight: bold"> <span class = "text-en">Individual</span><span class ="text-hin">स्वयं परीक्षा ले</span> </h4>
+					<div class = "row">
+						<div class = "col-sm-3"><img class = "box-images" src = "images/individual.png" style="height: 12vh"></div>
+						<div class = "col-sm-9"><p class = "text-en">Does not belong to any University? Grab your job opportunity while registering into the site, take Assesments and build your path Ahead!</p><p class ="text-hin">
+किसी भी विश्वविद्यालय से संबंधित नहीं है? साइट पर पंजीकरण करते समय अपना नौकरी का मौका लें, आकलन करें और आगे अपना रास्ता बनाएं!</p></div>			
+					</div>
+					<div style="text-align: center; padding: 3vh 0 2vh 0">
+						<button class = "button1"><a href = "self-assessment.html" target = "_blank"><span class = "text-en">Register!</span><span class = "text-hin">रजिस्टर</span></a></button>
+					</div>
+				</div>
+				<div class = "col-sm-1"></div>
+			</div>
+		</div>
+
+		<div class = "col-sm-4 outer-main-box">
+			<div class = "row">
+				<div class = "col-sm-1"></div>
+				<div class = "col-sm-10 main-box">
+					<h4 style="text-align: center; font-weight: bold"> <span class = "text-en">University</span><span class = "text-hin">साइन अप करें
+</span> </h4>
+					<div class = "row">
+						<div class = "col-sm-3"><img class = "box-images" src = "images/university.jpg" style="height: 12vh"></div>
+						<div class = "col-sm-9"><p class = "text-en">Want to make your University centralized? Sign up for the cause! Make your University diversified by registering through YOUTH FOR JOBS!</p> <p class = "text-hin">अपने विश्वविद्यालय को केंद्रीकृत बनाना चाहते हैं? कारण के लिए साइन अप करें! नौकरी के लिए युवाओं के माध्यम से पंजीकरण करके अपने विश्वविद्यालय को विविधतापूर्ण बनाएं!</p></div>
+					</div>
+					<div style="text-align: center; padding: 3vh 0 2vh 0">
+						<button class = "button1"><a href = "user_signup.html" target = "_blank1"><span class = "text-en">Register!</span><span class = "text-hin">रजिस्टर
+</span> </a></button>
+					</div>
+				</div>
+				<div class = "col-sm-1"></div>
+			</div>
+		</div>
+
+		<div class = "col-sm-4 outer-main-box">
+			<div class = "row">
+				<div class = "col-sm-1"></div>
+				<div class = "col-sm-10 main-box">
+					<h4 style="text-align: center; font-weight: bold"><span class = "text-en">Corporation</span><span class = "text-hin">डॉक्टरों के लिए
+</span></h4>
+					<div class = "row">
+						<div class = "col-sm-3"><img class = "box-images" src = "images/corporation.png" style="height: 12vh"></div>
+						<div class = "col-sm-9"><p class = "text-en">Want to be a part of Youth for Jobs? Do join us, build partnership and make it diversified thorugh registering your company!</p><p class = "text-hin">नौकरी के लिए युवाओं का हिस्सा बनना चाहते हैं? हमसे जुड़ें, भागीदारी बनाएं और इसे अपनी कंपनी को पंजीकृत करने के लिए विविध विविधता बनाएं!</p></div>			
+					</div>
+					<div style="text-align: center; padding: 3vh 0 2vh 0">
+						<button class = "button1"><a href ="corporations.html" target = "_blank2"><span class = "text-en">Register!</span><span class = "text-hin">रजिस्टर</span></a></button>
+					</div>
+				</div>
+				<div class = "col-sm-1"></div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function toggleLanguage(lang)
+		{
+
+			if(lang==1)
+				switchLanguageToHindi();
+			else if(lang==2)
+				switchLanguageToEnglish();
+		}
+		function switchLanguageToHindi() {
+
+			var english_text = document.getElementsByClassName("text-en");
+			var hindi_text= document.getElementsByClassName("text-hin");
+			console.log(english_text);
+			console.log(hindi_text);
+			var l = english_text.length;
+			var i;
+
+			for(i = 0; i <l; i++)
+			{
+				english_text[i].style.display = "none";
+				hindi_text[i].style.display = "block";
+			}
+			document.getElementById("switch-to-hindi").style.display = "none";
+			document.getElementById("switch-to-english").style.display = "block";
+		}
+
+		function switchLanguageToEnglish() {
+			var english_text = document.getElementsByClassName("text-en");
+			var hindi_text= document.getElementsByClassName("text-hin");
+			console.log(english_text);
+			console.log(hindi_text);
+			var l = hindi_text.length;
+			var i;
+
+			for(i = 0; i <l; i++)
+			{
+				english_text[i].style.display = "block";
+				hindi_text[i].style.display = "none";
+			}
+
+			document.getElementById("switch-to-hindi").style.display = "block";
+			document.getElementById("switch-to-english").style.display = "none";
+		}
+	</script>
+</body>
+</html>

@@ -23,9 +23,9 @@ if( isset( $_POST['email'])) {
 
 $mobile = ''; 
 if( isset( $_POST['mobile'])) {
-    $password = $_POST['mobile']; 
+    $mobile = $_POST['mobile']; 
 } 
-$con="INSERT INTO `disable_student`(colgname,stuname,email,mobile) VALUES ('$colgname', '$stuname','$email', '$mobile' )";
+$con="INSERT INTO `disable_students`(colgname,stuname,email,mobile) VALUES ('$value1', '$stuname','$email', '$mobile' )";
 
 $result = mysqli_query($link,$con);
 	if ( false===$result ) {

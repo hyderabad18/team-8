@@ -1,3 +1,6 @@
+<?php  
+session_start();  
+?>  
 <?php
 	$link = mysqli_connect('localhost', 'root' , '', 'jpmc');
 	if(!$link){
@@ -44,7 +47,7 @@ if( isset( $_POST['password'])) {
 }
 else {
 	$_SESSION["colgname"] = "$colgname";
-//	echo  "hi" .$_SESSION["email"]. "!";
+
 	header("Location: univ_signup.html");
   
 }

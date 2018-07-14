@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Main page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset = "UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+    .navbar-default .navbar-nav > li > a {
+			color: black;
+			font-weight: bold;
+			margin: 0;
+		}
+
+		.navbar-header > a {
+			color: black;
+			font-weight: bold;
+		}
+
+		.navbar {
+			margin:0;
+		}
+		 
+</script>
+</head>
+<body>
+     <nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span> 
+				</button>
+				<a class = "navbar-brand" href = "index.html" style = "padding: 0;"> 
+				  <img src = "images/logo_name_h.jpg" height = 50px style = "float: left;">
+				</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li id = "switch-to-hindi" onclick = "toggleLanguage(1)"><a>हिन्दी</a></li>
+					<li id = "switch-to-english" onclick = "toggleLanguage(2)" style="display: none;"><a>English</a></li>
+					<li class="active"><a href="#"><span class = "text-en">Home</span><span class = "text-hin">होम</span></a></li>
+					<li><a href="about.html"><span class = "text-en">About</span><span class = "text-hin">अधिक जानकारी</span></a></li>
+					<li><a href="get-started.html"><span class = "text-en">Get Started</span><span class = "text-hin">शुरुआत</span></a></li>
+					<li><a href="resources.html"><span class = "text-en">Resources</span><span class = "text-hin">साधन</span></a></li>
+					<li><a href="faqs.html"><span class = "text-en">FAQs</span><span class = "text-hin">प्रश्न</span></a></li>
+					<li><a href="login.html"><span class = "text-en">Login</span><span class = "text-hin">लॉग इन</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<img src="faq.jpg"  width="30%" height="50%">
+	<table align="left">
+	  <tr><td><ul style="list-style-type:disc"><li><h3>How do i register?</h3></li></ul></td></tr>
+	  <tr><td><h4><pre>  Ans. You can click on the "register" button on the home page.</pre></h4></td></tr>
+	  <tr><td><ul style="list-style-type:disc"><li><h3>I am not student of any university.Can I join this training?<h3></li></ul><td></tr>
+	  <tr><td ><h4><pre>   Ans.Yes,you can join this training by registering.</pre><h4></li></ul></td></tr>
+	  <tr><td><ul style="list-style-type:disc"><li><h3>Can I take mock tests all at a time?</h3></li></ul></td></tr>
+	  <tr><td><h4><pre>  Ans. No,you are allowed to take once in a month.</pre></h4></td></tr>
+	  <tr><td><ul style="list-style-type:disc"><li><h3>what are the minimum no of tests i need to attempt?<h3></li></ul><td></tr>
+	  <tr><td ><h4><pre>   Ans.You need to take minimum 10 tests to be eligible to apply for job.</pre><h4></li></ul></td></tr>
+	  
+	 </table> 
+	 
+
+     
+    
+    
+</body>
+   

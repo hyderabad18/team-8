@@ -31,6 +31,9 @@ $result = mysqli_query($link,$con);
 	if ( false===$result ) {
   printf("error: %s\n", mysqli_error($link));
 }
+else{
+	header("Location: univ_signup.html");
+}
 
 	mysqli_close($link);
 

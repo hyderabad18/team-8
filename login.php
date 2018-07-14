@@ -20,7 +20,7 @@ if( isset( $_POST['password'])) {
 } 
 
 $query = "select * from `individual_signup` where email='$email' and password='$password' ";
-echo "select * from `individual_signup` where email='$email' and password='$password'";
+
 $result = mysqli_query($link,$query);
 
 if (mysqli_num_rows($result) > 0) {
@@ -28,7 +28,11 @@ if (mysqli_num_rows($result) > 0) {
 	$_SESSION["email"] = "$email";
 //	echo "$email";
 //	echo  "hi" .$_SESSION["email"]. "!";
-	header("Location: dashboard_individual.html");
+	header("Location: dashboard_individual.php");
+}
+else
+{
+	header("Location: login.html");
 }
 
 ?>

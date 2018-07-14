@@ -45,7 +45,7 @@ if( isset( $_POST['password'])) {
 else {
 	$_SESSION["colgname"] = "$colgname";
 //	echo  "hi" .$_SESSION["email"]. "!";
-	header("Location: disable.php");
+	header("Location: univ_signup.html");
   
 }
 	

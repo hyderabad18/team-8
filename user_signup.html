@@ -29,6 +29,18 @@
 		  background-color: #ddd;
 		  outline: none;
 		}
+.navbar-default .navbar-nav > li > a {
+			color: black;
+			font-weight: bold;
+			margin: 0;
+		}
+		.navbar-header > a {
+			color: black;
+			font-weight: bold;
+		}
+		.navbar {
+			margin:0;
+		}
 
 		hr {
 		  border: 1px solid #f1f1f1;
@@ -104,6 +116,32 @@
 
 </head>
 <body bgcolor="blue">
+<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span> 
+				</button>
+				<a class = "navbar-brand" href = "index.html" style = "padding: 0;"> 
+				  <img src = "images/logo_name_h.jpg" height = 50px style = "float: left;">
+				</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li id = "switch-to-hindi" onclick = "toggleLanguage(1)"><a>हिन्दी</a></li>
+					<li id = "switch-to-english" onclick = "toggleLanguage(2)" style="display: none;"><a>English</a></li>
+					<li class="active"><a href="#"><span class = "text-en">Home</span><span class = "text-hin">होम</span></a></li>
+					<li><a href="about.html"><span class = "text-en">About</span><span class = "text-hin">अधिक जानकारी</span></a></li>
+					<li><a href="get-started.html"><span class = "text-en">Get Started</span><span class = "text-hin">शुरुआत</span></a></li>
+					<li><a href="resources.html"><span class = "text-en">Resources</span><span class = "text-hin">साधन</span></a></li>
+					<li><a href="faqs.html"><span class = "text-en">FAQs</span><span class = "text-hin">प्रश्न</span></a></li>
+					<li><a href="login.html"><span class = "text-en">Login</span><span class = "text-hin">लॉग इन</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
 	<div class = "container"  style="width:35%; height:70%; border:0px; border-radius: 10px">
 					<form name = "patient" action="user_signup" method = "post" style="border:0px solid #ccc">
@@ -117,7 +155,7 @@
 					    <input type="text" placeholder="Enter Address" name="address" required>
 					    <br>
 					    <label for="textnames"><b>Course</b></label>
-					    <input type="text" placeholder="ourse" name="course" required>
+					    <input type="text" placeholder="course" name="course" required>
 					    <br>
 					    <label for="email"><b>Contact Name</b></label>
 					    <input type="text" placeholder="Contact Name" name="contactname" required>
@@ -128,13 +166,17 @@
 						<label for="email"><b>E-Mail</b></label>
 					    <input type="text" placeholder="E-Mail" name="email" required>
 					    <br>
-						<label for="email"><b>Eligible Students</b></label>
-					    <input type="text" placeholder="Eligible Students" name="eligible" required>
-					    <br>
-					    <label for="psw"><b>Password</b></label>
+						<label for="psw"><b>Password</b></label>
 					    <input type="password" placeholder="Enter Password" name="password" required>
-					    <br>	
-					   
+					    <br>
+						<br>
+						<br>
+                        <center>						
+						<form action="Univ_Student.html">
+                        <input type="submit" value="Enter Student Details">
+						<center>
+                        </form>
+					   <br><br>
 					    <div class="clearfix" style="display: flex; justify-content: center;">
 					      <button type="submit" class="signupbtn" onclick="validate_patient()">Sign Up</button>
 					    </div>

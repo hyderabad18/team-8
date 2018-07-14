@@ -187,6 +187,7 @@ if(!$link){
             </div>
             
             <!--Content-->
+            <form action="feedback.php">
             <h1 style="text-align: center;">Feedback</h1>
             <center>
                 
@@ -220,11 +221,13 @@ if(!$link){
                         <input type="range" min="1" max="5" value="3" class="slider" id="q2" oninput="update(this)">
                             </div>
                     <br>
-                    
-                    <label>Other comments: </label><br>
-                    <textarea name = "comments" rows = "6" cols = "100" placeholder="Your comments..."></textarea>
+                    <br>
+                    <div class="clearfix" style="display: flex; justify-content: center;">
+                          <button type="submit" class="signupbtn" onclick="validate_patient()">Submit</button>
+                        </div>
                 </div>
             </center>
+        </form>
             <script type="text/javascript">
                 var remarks = ["Terrible", "Bad", "Average", "Good", "Very good"]
                 var mySlideContainerList = document.getElementsByClassName("slidecontainer");

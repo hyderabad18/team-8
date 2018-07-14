@@ -1,0 +1,105 @@
+
+     
+ <?php
+session_start();
+?>
+<?php
+    $nameErr =$passErr="";
+// define variables and set to empty values
+$nameErr = $emailErr = $genderErr = $websiteErr = "";
+$name = $email = $gender = $comment = $website = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["name"])) {
+    $nameErr = "Name is required";
+  } 
+  
+if (empty($_POST["password"])) {
+    $passErr = "Password is required";
+  } 
+}
+    
+ ?>
+
+/*<?php
+if(isset($_SESSION['usr_id'])!="") {
+	
+}
+
+//check if form is submitted
+
+	if(isset($_REQUEST["submit"])){
+        // echo "hello";
+$names=$_REQUEST["name"];
+$passwordS=$_REQUEST["password"];
+
+$servername = "localhost";
+$username = "pushpa";
+$password = "1234";
+$dbname = "bsnl";
+
+$conn = mysql_connect($servername, $username, $password);
+
+if(!$conn )
+{
+die('Could not connect: ' . mysql_error());
+}
+
+$connection=mysql_select_db("library",$conn);
+echo "established";
+
+       $result = mysql_query("SELECT * FROM users",$conn);
+
+	while($row = mysql_fetch_array($result)) {
+            $a=$row['userid'];
+            $b=$row['password'];
+              if($names==$a and $passwordS==$b){
+               $_SESSION['usr_id']!="$names";
+               header("Location:index.html");
+		}
+else {
+		$errormsg = "Incorrect name or Password!!!";
+	}
+
+	
+ }
+}
+?>*/
+<html>
+<head>
+<title> login form design</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>        
+
+<body>
+
+			              
+<form role="form" method="post" name="loginform">
+				
+	//<div class="loginbox">
+		//<img src="pic2.png" class="pic2">
+		<h1>Login Here</h1>
+		
+			<p>User Name</p>
+			<input type="text" name="name" placeholder="Enter Username">
+<span class="error">* <?php echo $nameErr;?></span>
+            <center><p id="demo" style="color:red;"</p></center>
+			<p>Password</p>
+			<input type="password" name="password" placeholder="Enter Password">
+  <span class="error">* <?php echo $passErr;?></span>
+
+                                      <input type="submit" name="submit" value="Login">
+			<a href="register.php">Don't have an acount?</a>
+
+		
+</form>		
+<span class="text-danger"><?php if (isset($errormsg)) { echo $errormsg; } ?></span> 
+	</div>
+	</body>
+
+
+
+</html>
+ ?>
+
+

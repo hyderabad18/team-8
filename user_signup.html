@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Sign Up</title>
+	  <script type="text/javascript" src="js/validate_patient.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+	<style type="text/css">
+	ul {
+        li: right;
+    }
+ 
+		* {box-sizing: border-box; font-size: 15px;}
+		/* Full-width input fields */
+		  input[type=text], input[type=password] {
+		    width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+		}
+
+		input[type=text]:focus, input[type=password]:focus {
+		  background-color: #ddd;
+		  outline: none;
+		}
+
+		hr {
+		  border: 1px solid #f1f1f1;
+		  margin-bottom: 25px;
+		}
+
+		/* Set a style for all buttons */
+		button {
+		  background-color: #2196F3;
+		  color: white;
+		  padding: auto;
+		  height: 6vh;
+		  border: none;
+		  cursor: pointer;
+		  width: 100%;
+		  opacity: 0.9;
+
+		}
+
+		button:hover {
+		  opacity:1;
+		}
+
+		/* Extra styles for the cancel button */
+		.cancelbtn {
+		  padding: auto;
+		  background-color: #f44336;
+		}
+
+		/* Float cancel and signup buttons and add an equal width */
+		.cancelbtn, .signupbtn {
+		  margin: auto;
+		  width: 50%;
+		}
+
+		/* Add padding to container elements */
+		.container {
+		  padding: 10vh auto;
+		  margin: auto;
+		}
+
+		/* Clear floats */
+		.clearfix::after {
+		  content: "";
+		  clear: both;
+		  display: table;
+		  visibility: hidden;
+		}
+
+		.sign-up {
+			width: 100%;
+			border: 2px;
+			border-radius: 25px;
+			background-color: white;
+			margin: auto;
+			padding: 5vh 5vh 3vh 5vh;
+		}
+
+		/* Change styles for cancel button and signup button on extra small screens */
+		@media only screen and (max-width: 600px) {
+		  .cancelbtn, .signupbtn {
+		    width: 100%;
+		  }
+
+		  .sign-up {
+		  	width: 100%;
+		  	margin: 0;
+
+		  }
+		}
+		
+	</style>
+
+</head>
+<body bgcolor="blue">
+
+	<div class = "container"  style="width:35%; height:70%; border:0px; border-radius: 10px">
+					<form name = "patient" action="user_signup" method = "post" style="border:0px solid #ccc">
+					    <h1 align = "center">Sign Up</h1>
+					    
+					    <hr>
+					    <label for="textnames"><b>University Name</b></label>
+					    <input type="text" placeholder="Enter University Name" name="colgname" required>
+					    <br>
+              			<label for="textnames"><b>Address</b></label>
+					    <input type="text" placeholder="Enter Address" name="address" required>
+					    <br>
+					    <label for="textnames"><b>Course</b></label>
+					    <input type="text" placeholder="ourse" name="course" required>
+					    <br>
+					    <label for="email"><b>Contact Name</b></label>
+					    <input type="text" placeholder="Contact Name" name="contactname" required>
+					    <br>
+						<label for="email"><b>Mobile</b></label>
+					    <input type="text" placeholder="Mobile" name="mobile" required>
+					    <br>
+						<label for="email"><b>E-Mail</b></label>
+					    <input type="text" placeholder="E-Mail" name="email" required>
+					    <br>
+						<label for="email"><b>Eligible Students</b></label>
+					    <input type="text" placeholder="Eligible Students" name="eligible" required>
+					    <br>
+					    <label for="psw"><b>Password</b></label>
+					    <input type="password" placeholder="Enter Password" name="password" required>
+					    <br>	
+					   
+					    <div class="clearfix" style="display: flex; justify-content: center;">
+					      <button type="submit" class="signupbtn" onclick="validate_patient()">Sign Up</button>
+					    </div>
+					    <br>
+					   
+					</form>
+	</div>
+	
+</body>
+</html>

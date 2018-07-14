@@ -1,9 +1,8 @@
-<!DOCTYPE html>
+
 <html>
-	//hello
 <head>
-	<title> Student Details</title>
-	  <script type="text/javascript" src="js/validate_patient.js"></script>
+	<title>Add Student</title>
+	  <script type="text/javascript" src="/js/validate_patient.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -14,7 +13,18 @@
 	ul {
         li: right;
     }
- 
+    .navbar-default .navbar-nav > li > a {
+        color: black;
+        font-weight: bold;
+        margin: 0;
+    }
+  .navbar-header > a {
+        color: black;
+        font-weight: bold;
+    }
+    .navbar {
+        margin:0;
+    }
 		* {box-sizing: border-box; font-size: 15px;}
 		/* Full-width input fields */
 		  input[type=text], input[type=password] {
@@ -104,11 +114,34 @@
 	</style>
 
 </head>
-<body bgcolor="blue">
+<body>
+<nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> 
+                </button>
+                <a class = "navbar-brand" href = "index.html" style = "padding: 0;"> <img src = "images/logo_name_h.jpg" height = 50px style = "float: left;"></a>
+	
 
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="get-started.html">Get Started</a></li> 
+                    <li><a href="resources.html">Resources</a></li> 
+                    <li><a href="faqs.html">FAQs</a></li> 
+                    <li><a href="login.html">Login</a></li> 
+                </ul>
+            </div>
+        </div>
+    </nav>
 	<div class = "container"  style="width:35%; height:70%; border:0px; border-radius: 10px">
-					<form name = "patient" action="user_signup" method = "post" style="border:0px solid #ccc">
-					    <h1 align = "center">Sign Up</h1>
+					<form name = "patient" action="./disable.php" method = "post" style="border:0px solid #ccc">
+					    <h1 align = "center">Enter Student Details</h1>
 					    
 					    <hr>
 					   <label for="email"><b>Name of Student</b></label>
@@ -120,15 +153,17 @@
 					    <label for="psw"><b>Phone Number</b></label>
 					    <input type="text" placeholder="Phone Number" name="mobile" required>
 					    <br>	
-						 <button type="submit" class="signupbtn" onclick="validate_patient()">Add Students</button>
 						
-					   
 					    <div class="clearfix" style="display: flex; justify-content: center;">
-					      <button type="submit" class="signupbtn" onclick="validate_patient()">Sign Up</button>
+					      <button type="submit" class="signupbtn" onclick="validate_patient()">Add Student</button>
 					    </div>
 					    <br>
 					   
 					</form>
+	</div>
+	
+</body>
+</html>
 	</div>
 	
 </body>

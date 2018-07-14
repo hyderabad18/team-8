@@ -1,0 +1,437 @@
+<?php
+ session_start();
+?>
+<?php
+$nameErr = $email i'dErr = $genderErr = $ageErr = $college/universityErr = $disabilityErr = $contact numberErr = $passwordErr"";
+$name = $email i'd = $gender = $age = $college/university = $disability = $contact number = $password="";
+<
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["name"])) {
+    $nameErr = "Name is required";
+  } else {
+    $name = test_input($_POST["name"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+      $nameErr = "Only letters and white space allowed"; 
+    }
+  }
+
+  if (empty($_POST["email"])) {
+    $emailErr = "Email i'd is required";
+  } else {
+    $email = test_input($_POST["email"]);
+    // check if e-mail address is well-formed
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $emailErr = "Invalid email format"; 
+    }
+  }
+
+  if (empty($_POST["gender"])) {
+      
+    $genderErr = "gender is required";
+  } else {
+    $gender = test_input($_POST["gender"]);
+    //check if gender is selected
+    if(!filter_var[$gender, FILTER_validate_gender]){
+        $genderErr = "gender not selected";
+    }
+  }
+
+  if (empty($_POST["age"])) {
+    $genderErr = "age is required";
+  } else {
+    $age = test_input($_POST["age"]);
+    //check age only contains number
+    if (!preg_match["/^[-0-9]*$/",$age]){
+        $ageErr = "age not entered";
+    }
+  }
+  if (empty($_POST["college/university"])) {
+      
+    $college/universityErr = "required";
+  } else {
+    $college/university = test_input($_POST["college/university"]);
+    //check if college/university is typed
+    if(!filter_var[$college/university, FILTER_validate_college/university]){
+        $college/universityErr = "college/university is not valid";
+    }
+  }
+  if (empty($_POST["disability"])) {
+      
+    $disabilityErr = "required";
+  } else {
+    $disability = test_input($_POST["disability"]);
+    //check if disability is selected
+    if(!filter_var[$disability, FILTER_validate-_disability]){
+        $disabilityErr = "disability not selected";
+    }
+  }
+  
+  if (empty($_POST["contact number"])) {
+      
+    $contact numberErr = "required";
+  } else {
+    $contact number = test_input($_POST["contact number"]);
+    //check if contact number only contains numbers
+    if(!filter_var[$gender, FILTER_validate_contact number]){
+        $genderErr = "contact is not valid";
+    }
+  }
+ if (empty($_POST["password"])) {
+    $password = "password is required";
+  } else {
+    $password = test_input($_POST["password"]);
+    // check if password is in correct form
+    if (!preg_match(["/^[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]*$/",$password)) {
+      $passwordErr = "Invalid password"; 
+    }
+  }
+}
+?>
+<?php
+if(isset($_SESSION['usr_id'])!="") {
+	
+}
+//check if form is submitted
+
+	if(isset($_REQUEST["submit"])){
+         echo "hello";
+        $names=$_REQUEST["name"];
+$email=$_REQUEST["email"];
+$gender=$_REQUEST["gender"];
+$age=$_REQUEST["age"];
+$password=$_REQUEST["college/university"];
+$password=$_REQUEST["disability"];
+$password=$_REQUEST["contact number"];
+$password=$_REQUEST["password"];
+
+$servername = "localhost";
+$username = "pushpa";
+$password = "1234";
+$dbname = "bsnl";
+
+$conn = mysql_connect($servername, $username, $password);
+
+if(!$conn )
+{
+die('Could not connect: ' . mysql_error());
+}
+
+$connection=mysql_select_db("library",$conn);
+echo "established";
+        $sql = "INSERT INTO `users`( `name`, `email i'd` ,`gender`, `age`, `college/university`, `disability`, `contact number`, `password`);
+        echo "Inserted";
+    mysql_query($sql,$conn);
+    
+
+    }
+?>
+<html>
+<head>
+	<title>Main page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset = "UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+        ul {
+        li: right;
+    }
+ 
+		* {box-sizing: border-box; font-size: 15px;}
+		/* Full-width input fields */
+		  input[type=text], input[type=password] {
+		    width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+		}
+		input[type=text]:focus, input[type=password]:focus {
+		  background-color: #ddd;
+		  outline: none;
+		}
+		hr {
+		  border: 1px solid #f1f1f1;
+		  margin-bottom: 25px;
+		}
+		/* Set a style for all buttons */
+		button {
+		  background:#00000;
+		  color: white;
+		  padding: auto;
+		  height: 6vh;
+		  border: none;
+		  cursor: pointer;
+		  width: 100%;
+		  opacity: 0.9;
+		}
+		button:hover {
+		  opacity:1;
+		}
+		/* Extra styles for the cancel button */
+		.cancelbtn {
+		  padding: auto;
+		  background-color: #f44336;
+		}
+		/* Float cancel and signup buttons and add an equal width */
+		.cancelbtn, .signupbtn {
+		  margin: auto;
+		  width: 50%;
+		}
+		/* Add padding to container elements */
+		.container {
+		  padding: 10vh auto;
+		  margin: auto;
+		}
+		/* Clear floats */
+		.clearfix::after {
+		  content: "";
+		  clear: both;
+		  display: table;
+		  visibility: hidden;
+		}
+		.sign-up {
+			width: 100%;
+			border: 2px;
+			border-radius: 25px;
+			background-color: white;
+			margin: auto;
+			padding: 5vh 5vh 3vh 5vh;
+		}
+		/* Change styles for cancel button and signup button on extra small screens */
+		@media only screen and (max-width: 600px) {
+		  .cancelbtn, .signupbtn {
+		    width: 100%;
+		  }
+		  .sign-up {
+		  	width: 100%;
+		  	margin: 0;
+		  }
+		}
+		
+
+		.carousel-inner {
+			padding-bottom: 0;
+		}
+
+		html,body
+		{
+		    width: 100%;
+		    height: 100%;
+		    margin: 0px;
+		    padding: 0px;
+		    overflow-x: hidden; 
+		}
+
+		ul {
+			li: right;
+		}
+
+		.navbar-default .navbar-nav > li > a {
+			color: black;
+			font-weight: bold;
+			margin: 0;
+		}
+
+		.navbar-header > a {
+			color: black;
+			font-weight: bold;
+		}
+
+		.navbar {
+			margin:0;
+		}
+
+		h4 {
+			text-align: center;
+		}
+		
+
+		.button1 {
+			height: 6vh;
+			border-radius: 10px;
+			background-color:  #2196F3;
+			border: none;
+			color: white;
+
+		}
+		.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #2196F3;
+   color: white;
+   text-align: center;
+}
+    .fa {
+  padding: 30px;
+  font-size: 30px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 4px 1px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+
+  width: 100px;
+  background: #3B5998;
+  color: white;
+  1px 30px 1px 30px;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+		.main-box {
+			background: linear-gradient(to right, #d3cce3, #e9e4f0);
+			border-radius: 8px;
+			margin-left: 0vh;
+		}
+
+		.button1 > a {
+			text-decoration: none; color: white;
+		}
+
+		.img {
+			width: 100%;
+			height: auto;
+		}
+
+		.text-hin {
+			display: none;
+		}
+
+		.text-en {
+			display: block;
+		}
+
+		#switch-to-hindi, #switch-to-english > a {
+			text-decoration: underline;
+			cursor: pointer;
+			
+		}
+
+
+		@media only screen and (max-width: 600px) {
+			.outer-main-box {
+				padding: 5vh 15vw 0 15vw;
+				background: linear-gradient(to right, #d3cce3, #e9e4f0);
+			}
+
+			#first-row {
+				padding-top: 0;
+			}
+
+			.box-images {
+				display: block;
+				margin: 2vh auto;
+			}
+
+			h4 {
+				padding-top: 3vh;
+			}
+		}
+
+	</style>
+</head>
+
+    <body>
+ <nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span> 
+				</button>
+				<a class = "navbar-brand" href = "index.html" style = "padding: 0;"> 
+				  <img src = "images/logo_name_h.jpg" height = 50px style = "float: left;">
+				</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li id = "switch-to-hindi" onclick = "toggleLanguage(1)"><a>हिन्दी</a></li>
+					<li id = "switch-to-english" onclick = "toggleLanguage(2)" style="display: none;"><a>English</a></li>
+					<li class="active"><a href="#"><span class = "text-en">Home</span><span class = "text-hin">होम</span></a></li>
+					<li><a href="about.html"><span class = "text-en">About</span><span class = "text-hin">अधिक जानकारी</span></a></li>
+					<li><a href="get-started.html"><span class = "text-en">Get Started</span><span class = "text-hin">शुरुआत</span></a></li>
+					<li><a href="resources.html"><span class = "text-en">Resources</span><span class = "text-hin">साधन</span></a></li>
+					<li><a href="faqs.html"><span class = "text-en">FAQs</span><span class = "text-hin">प्रश्न</span></a></li>
+					<li><a href="login.html"><span class = "text-en">Login</span><span class = "text-hin">लॉग इन</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+    
+    
+
+
+	<div class = "container"  style="width:35%; height:70%; border:0px; border-radius: 10px">
+   
+
+<form method="post">
+<div class="rloginbox">
+    		
+
+    <h1>Student Registration</h1>
+    
+    <br>
+   <b>Name</b> <span class="error">* <?php echo $nameErr;?></span>:<input type="text" name="NAME" placeholder="Enter Name">
+  <br>
+ <br>
+    <b>Email Id</b><span class="error">* <?php echo $nameErr;?></span>:<input type="text" name="EMAIL I'D" placeholder="Enter email i'd">
+    
+ <br>
+ <br>
+  
+ <b>Gender</b><span class="error">* <?php echo $nameErr;?></span>:<select name="GENDER">
+  <option value="male">male</option>
+  <option value="female">female</option>
+</select>
+
+ <br>
+ <br>
+ <b>Age</b><span class="error">* <?php echo $nameErr;?></span>:<input type="text" name="AGE" placeholder="Enter age">
+ <br>
+ <br>
+ <b>College/University</b><span class="error">* <?php echo $nameErr;?></span>:<input type="text" name="COLLEGE/UNIVERSITY" placeholder="college/university">
+    
+ <br>
+ <br>
+<b>Disability</b><span class="error">* <?php echo $nameErr;?></span>:<select name="DISABILITY"> 
+  <option value="vision">vision</option>
+  <option value="hearing">hearing</option>
+  <option value="speech">speech</option>
+  <option value="physically challenged">physically challenged</option>
+</select>
+   
+ <br>
+ <br>
+ <b>Contact Number</b><span class="error">* <?php echo $nameErr;?></span>:<input type="text" name="CONTACT NUMBER" placeholder="Enter contact number">
+ <br>
+ <br>
+  <b>Password</b><span class="error">* <?php echo $nameErr;?></span>:<input type="text" name="PASSWORD" placeholder="Enter password">
+    
+ <br>
+ <br>
+<center>
+ <input type="submit" name="submit">
+ <br>
+ <br>
+    </center>
+    
+</div>
+    </form>
+</body>
+</html>

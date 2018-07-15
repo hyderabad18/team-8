@@ -173,6 +173,7 @@ if(!$link){
                 <div style="width:5%; height:100%; display:flex; justify-content:flex-start; align-items:center; font-size:12px; padding-right:12%; color:#FFF;">&gt;</div>
             </div>
         </div>
+
         <!--Heading-->
         <div class="w3-main" style="margin-left:17%; height:100vh;">
             <div style="height:15vh; display:flex; align-items:center; background:#4285F4;">
@@ -186,7 +187,8 @@ if(!$link){
                 </div>
             </div>
             
-           
+           <p>Companies Applicable:</p>
+                <p>JPMC</p>
             <script type="text/javascript">
                 var remarks = ["Terrible", "Bad", "Average", "Good", "Very good"]
                 var mySlideContainerList = document.getElementsByClassName("slidecontainer");

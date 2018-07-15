@@ -199,7 +199,7 @@ if(!$link){
             </div>
             
             <!--Content-->
-            
+            <form action="dashboard.html">
             <div class = "container">
                 <h1 style="text-align: center;">Self-Assessment </h1>
                 <p style="text-align: justify;">To help you familiarise with standard aptitude tests, and assess how well you are likely to do in real ones, we have designed a number of short online aptitude tests that you can practise for free:</p>
@@ -329,7 +329,8 @@ if(!$link){
                         <input type = "button" value = "Consult a psychiatrist" id = "consult-button">
                             </div>
                 </section>
-                
+                </div>
+            </form>
                 <script type="text/javascript">
                     function calculate()
                     {
